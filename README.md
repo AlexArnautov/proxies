@@ -8,8 +8,8 @@
 Приложение станет доступно по адресу laravel.local
 
 ## Использованные сторонние библиотеки
-https://laravel-excel.com/
-https://jwt-auth.readthedocs.io/en/develop/
+1) https://laravel-excel.com/
+2) https://jwt-auth.readthedocs.io/en/develop/
 
 ## Подключение новго провайдера прокси
 1) Создать новый класс провайдера по аналогии с
