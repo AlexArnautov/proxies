@@ -20,5 +20,6 @@ echo "===== Served to http://localhost =====";
 echo "===== Also you can add laravel.local =";
 echo "===== to your OS etc file.           =";
 echo "======================================";
+sudo chmod 777 -R storage
 
 
