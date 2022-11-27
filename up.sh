@@ -17,8 +17,8 @@ echo "======================================";
 docker-compose exec webserver php artisan test
 echo "======================================";
 echo "===== Served to http://localhost =====";
-echo "===== Also you can add laravel.local =";
-echo "===== to your OS etc file.           =";
+echo "===== Also you can add to host file ==";
+echo "===== 127.0.0.1 laravel.local ========";
 echo "======================================";
 sudo chmod 777 -R storage
 
