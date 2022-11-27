@@ -22,6 +22,6 @@ class ProxyServiceProvider extends ServiceProvider
                 return $this->app->make(RandomProxyProvider::class);
             });
 
-        //bindings for other proxies
+        //bindings for other proxy providers
     }
 }

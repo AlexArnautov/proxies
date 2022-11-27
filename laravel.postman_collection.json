@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "cd30b901-34a9-453e-9020-c8ed1db79779",
+		"name": "laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21706814"
+	},
+	"item": [
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.environment.set(\"token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test.proxy@mailinator.com\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "laravel.local/api/auth/login",
+					"host": [
+						"laravel",
+						"local"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "me",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "laravel.local/api/auth/me",
+					"host": [
+						"laravel",
+						"local"
+					],
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "laravel.local/api/auth/logout",
+					"host": [
+						"laravel",
+						"local"
+					],
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "laravel.local/api/auth/refresh",
+					"host": [
+						"laravel",
+						"local"
+					],
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proxy list",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "laravel.local/api/proxies/list",
+					"host": [
+						"laravel",
+						"local"
+					],
+					"path": [
+						"api",
+						"proxies",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "proxy export",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"test\":\"sdfsd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "laravel.local/api/proxies/export",
+					"host": [
+						"laravel",
+						"local"
+					],
+					"path": [
+						"api",
+						"proxies",
+						"export"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
