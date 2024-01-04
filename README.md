@@ -1,25 +1,24 @@
-## Инструкция по установке
-1) Клонировать репозиторий и перейти в директорию proxies
-2) Запустить скрипт up.sh (. up.sh)
-Скрипт может спросить sudo пароль для установки прав на директорию storage.
 
-Скрипт задеплоит приложение на localhost и выполнит все тесты.
-Также можно добавить строку 127.0.0.1 laravel.local в hosts файл в вашей ОС.
-Приложение станет доступно по адресу laravel.local
+## Installation Instructions
+1) Clone the repository and navigate to the proxies directory.
+2) Run the script up.sh (. up.sh)
+   The script may ask for the sudo password to set permissions on the storage directory.
 
-## Использованные сторонние библиотеки
+The script will deploy the application on localhost and execute all tests.
+You can also add the line 127.0.0.1 laravel.local to the hosts file in your OS.
+The application will be accessible at laravel.local.
+
+## Used Third-Party Libraries
 1) https://laravel-excel.com/
 2) https://jwt-auth.readthedocs.io/en/develop/
 
-## Подключение новго провайдера прокси
-1) Создать новый класс провайдера по аналогии с
-app/Services/RandomProxyProvider.php который реализует ProxyProviderInterface.php интерфейс.
-2) Создать репозиторий для этого провайдера (пример app/Repositories/RandomProxyRepository.php)
-3) В файле сервис-провайдера app/Providers/ProxyServiceProvider.php добавить биндинг нового интерфейса 
-для созданного репозитория.
+## Connecting a New Proxy Provider
+1) Create a new provider class analogous to app/Services/RandomProxyProvider.php that implements the ProxyProviderInterface.php interface.
+2) Create a repository for this provider (example app/Repositories/RandomProxyRepository.php)
+3) In the service provider file app/Providers/ProxyServiceProvider.php, add a binding of the new interface for the created repository.
 
-Таким образом можно одновременно пользоваться различными источниками прокси серверов просто
-подключая нужные репозитории через Dependency Injection.
+This way, you can simultaneously use various sources of proxy servers simply by connecting the necessary repositories through Dependency Injection.
 
-Также в корне проекта лежит Postman коллекция для тестов. (использует laravel.local URL)
+Also, there is a Postman collection for testing in the project's root. (uses laravel.local URL)
 FileName: laravel.postman_collection.json
+
