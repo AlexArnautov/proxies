@@ -1,3 +1,6 @@
+## Assigment
+
+Create proxy provider with easy usage of various sources of proxy servers.
 
 ## Installation Instructions
 1) Clone the repository and navigate to the proxies directory.
